@@ -1,0 +1,88 @@
+body{
+}
+
+.image
+{
+  background-position: center;
+  content:url("https://storage.googleapis.com/pod_public/750/123044.jpg");
+}
+
+.center
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 , h2{
+  text-align: center;
+}
+
+p
+{
+  text-align: center;
+  font-size: large;
+}
+
+.picsContainer{
+  text-align:center;
+}
+
+.imgSoc1
+{
+  display:inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  content:url("https://i.pinimg.com/1200x/73/db/02/73db02344af2f927fd361decc424e8b8.jpg");
+  height: 50px;
+  width: 50px;
+}
+
+.imgSoc2
+{
+  display:inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  content:url("https://static-00.iconduck.com/assets.00/facebook-icon-512x512-seb542ju.png");
+  height: 50px;
+  width: 50px;
+}
+
+.imgSoc3
+{
+  display:inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  content:url("https://cdn.pixabay.com/photo/2021/03/01/21/48/logo-6060989_960_720.jpg");
+  height: 50px;
+  width: 80px;
+}
+
+.butContainer
+{
+  text-align: center;
+}
+
+.button {
+  --bouncing-offset: 0.35em;
+  --bg: 178, 60%, 48%;
+
+  background-color: green;
+  color: var(--dark);
+
+  border: 0;
+  border-radius: 0.5em;
+  padding: 1em;
+
+  font-size: 2rem;
+  font-size: 16px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.button:active,
+.button:focus-visible {
+  transform: translateY(var(--bouncing-offset));
+  box-shadow: none;
+}
+

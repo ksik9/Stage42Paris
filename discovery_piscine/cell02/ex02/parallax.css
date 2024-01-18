@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  color: white;
+  font-weight: bolder;
+}
+
+.img1 {
+  background-image: url("https://m.media-amazon.com/images/M/MV5BNGEzN2ViNDYtYTg5Ny00MGQ5LThjOTQtYjFhMTA2ODhkNWY1XkEyXkFqcGdeQXVyMDgyNjA5MA@@._V1_.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.text1 {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  top: 50%;
+}
+
+.textbox {
+  background: black;
+  height: 300px;
+}
+
+.text2 {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  top: 50%;
+}
+
+.img3 {
+  background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2020/05/michael-scott-feature-image-for-the-office.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.text3 {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  top: 50%
+}

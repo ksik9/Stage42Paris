@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image1
+{
+  content:url("https://www.sncf.com/themes/contrib/sncf_theme/images/logo-sncf.svg?v=4230117423");
+  height: 100px;
+  width: 100px;
+}
+
+.menu {
+  background: #222;
+}
+
+.menu ul {
+  all: unset;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  background: #2a500c;
+}
+.menu ul li {
+  position: relative;
+}
+.menu ul li a {
+  display: block;
+  padding: 10px;
+}
+
+.menu ul li ul {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+}
+
+.menu ul ul li {
+  width: max-content;
+  min-width: 100%;
+  max-width: 200px;
+}
+
+.menu ul a {
+  all: unset;
+  color: #fff;
+  cursor: pointer;
+}
+.menu ul a:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.menu ul li:hover > ul {
+  display: flex; 
+}
+
+.menu ul ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.image2
+{
+  content:url("https://mesinfos.fr/content/articles/110/A183110/initial-trains.jpg");
+  height: 100%;
+  width: 100%;
+}

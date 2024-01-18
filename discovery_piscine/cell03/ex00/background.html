@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="background.css">
+</head>
+<body>    
+  <div class="butContainer">
+    <button class="button" onclick="changeBackgroundColor()">Click me!</button>
+  </div>
+</div>
+
+<script>
+  function changeBackgroundColor() {
+    var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    // # is used to generated a colour number in the hexadecimal format 
+    // Math.random() function returns a random number 
+    // 16777215 is 0xFFFFFF in hexadecimal
+    // we get a random number within the range of possible RGB values
+    // then converting to string
+    document.body.style.backgroundColor = randomColor;
+  }
+  </script>
+  
+</body>  
+</html>

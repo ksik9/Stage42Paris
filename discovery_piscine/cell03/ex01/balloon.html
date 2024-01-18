@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>    
+
+<div id="balloon" style="height: 200px; width: 200px; background-color: red; border-radius: 100px;" onmouseout="decreaseSizeAndColor()" onclick="increaseSizeAndColor()">
+</div>
+
+<script>
+  var allowedColors = ['green', 'blue', 'red'];
+  var currentColorIndex = 0;
+
+  function increaseSizeAndColor() {
+    var currentHeight = parseInt(document.getElementById('balloon').style.height);
+    var currentWidth = parseInt(document.getElementById('balloon').style.width);
+    var currentBorderRadius = parseInt(document.getElementById('balloon').style.borderRadius);
+    if (currentHeight < 420)
+    {
+      var selectedColor = allowedColors[currentColorIndex];
+      document.getElementById('balloon').style.backgroundColor = selectedColor;
+      currentColorIndex = (currentColorIndex + 1) % allowedColors.length; 
+      document.getElementById('balloon').style.height = (currentHeight + 10) + 'px';
+      document.getElementById('balloon').style.width = (currentWidth + 10) + 'px';
+      document.getElementById('balloon').style.borderRadius = (currentBorderRadius + 5) + 'px';      
+    }
+    else
+    {
+      window.alert("BOOM!");
+      document.getElementById('balloon').style.height = 200 + 'px';
+      document.getElementById('balloon').style.width = 200 + 'px';
+      document.getElementById('balloon').style.borderRadius = 100 + 'px';
+    
+    }
+  }
+
+  function decreaseSizeAndColor() {
+    var currentHeight = parseInt(document.getElementById('balloon').style.height);
+    var currentWidth = parseInt(document.getElementById('balloon').style.width);
+    var currentBorderRadius = parseInt(document.getElementById('balloon').style.borderRadius);
+    if (currentHeight > 200)
+    {
+      var selectedColor = allowedColors[currentColorIndex];
+      document.getElementById('balloon').style.backgroundColor = selectedColor;
+      currentColorIndex = (currentColorIndex - 1 + allowedColors.length) % allowedColors.length;
+      document.getElementById('balloon').style.height = (currentHeight - 5) + 'px';
+      document.getElementById('balloon').style.width = (currentWidth - 5) + 'px';
+      document.getElementById('balloon').style.borderRadius = (currentBorderRadius - 3) + 'px';
+    }
+    else
+    {
+      return;    
+    }
+  }
+  </script>
+  
+</body>  
+</html>
