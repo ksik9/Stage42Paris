@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <h1>Une calculatrice basique</h1>  
+
+ <form>
+  <input type="text" id="leftValue" name="leftValue">
+  <select name="math" id="math">
+    <option value="plus">+</option>
+    <option value="minus">-</option>
+    <option value="multiply">*</option>
+    <option value="divide">/</option>
+    <option value="modulo">%</option>
+  </select>
+  <input type="text" id="rightValue" name="rightValue"><br><br>
+  <input type="submit" value="Try me!" onclick="calculate()">
+</form> 
+
+<script>
+
+  function calculate() {
+    var leftValue = parseInt(document.getElementById('leftValue').value);
+    var rightValue = parseInt(document.getElementById('rightValue').value);
+    var total;
+    if (leftValue >= 0 && rightValue >= 0)
+    {
+      if (document.getElementById("math").value == "plus")
+      {
+        total = leftValue + rightValue;
+        console.log(total);
+      }
+      else if (document.getElementById("math").value == "minus")
+      {
+        total = leftValue - rightValue;
+        console.log(total);
+      }
+      else if (document.getElementById("math").value == "multiply")
+      {
+        total = leftValue * rightValue;
+        console.log(total);
+      }
+      else if (document.getElementById("math").value == "divide")
+      {
+        if (rightValue != 0)
+        {
+          total = leftValue / rightValue;
+          console.log(total);
+        }
+        else
+        {
+          window.alert("It’s over 9000!");
+          return;   
+        }
+      }
+      else if (document.getElementById("math").value == "modulo")
+      {
+        if (rightValue != 0)
+        {
+          total = leftValue % rightValue;
+          console.log(total);
+        }
+        else
+        {
+          window.alert("It’s over 9000!");   
+          return;
+        }
+      }
+      window.alert(total);
+    }
+    else
+    {
+      window.alert("Error :(");    
+    }
+  }
+
+  setIdleTimeout(10000, function() {
+    window.alert("Please use me...");
+  }, function() {}
+  );
+
+function setIdleTimeout(millis, onIdle, onUnidle) {
+    var timeout = 0;
+    startTimer();
+
+    function startTimer() {
+        timeout = setTimeout(onExpires, millis);
+        document.addEventListener("mousemove", onActivity);
+        document.addEventListener("keypress", onActivity);
+    }
+    
+    function onExpires() {
+        timeout = 0;
+        onIdle();
+    }
+
+    function onActivity() {
+        if (timeout) clearTimeout(timeout);
+        else onUnidle();
+        //since the mouse is moving, we turn off our event hooks for 1 second
+        document.removeEventListener("mousemove", onActivity);
+        document.removeEventListener("keypress", onActivity);
+        setTimeout(startTimer, 1000);
+    }
+}
+
+  </script>
+  
+</body>  
+</html>
